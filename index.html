@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de Connexion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 transition duration-500">
+    <div class="flex h-screen items-center justify-center">
+      <div
+        class="flex w-4/5 max-w-6xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg rounded-lg"
+      >
+        <!-- Carte gauche -->
+        <div
+          class="w-1/2 p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white flex flex-col items-center justify-center"
+        >
+          <h1 class="text-4xl font-bold mb-4">Welcome Back</h1>
+          <p class="mb-8 text-center">
+            Connectez-vous pour accéder à votre espace personnel.
+          </p>
+          <div class="flex space-x-4 animate-pulse">
+            <img
+              src="electricity.svg"
+              alt="Électricité industrielle"
+              class="w-12 h-12"
+            />
+            <img src="social.svg" alt="Analyse sociale" class="w-12 h-12" />
+            <img src="nutrition.svg" alt="Outils médicaux" class="w-12 h-12" />
+            <img src="couture.svg" alt="Coupe et couture" class="w-12 h-12" />
+          </div>
+        </div>
+
+        <!-- Carte droite -->
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h2
+            class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6"
+          >
+            Connexion
+          </h2>
+          <form action="#" class="space-y-4">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            />
+            <input
+              type="password"
+              placeholder="Mot de passe"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            />
+            <button
+              type="submit"
+              class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md"
+            >
+              Connexion
+            </button>
+          </form>
+          <p class="mt-4 text-center text-gray-600 dark:text-gray-400">
+            <a href="#" class="text-blue-500 hover:underline"
+              >Connexion par empreinte digitale</a
+            >
+          </p>
+
+          <!-- Toggle mode sombre -->
+          <div class="mt-6 flex justify-center items-center space-x-2">
+            <span class="text-gray-600 dark:text-gray-400">Mode sombre</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="dark-mode-toggle" class="sr-only" />
+              <div
+                class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:bg-blue-600"
+              >
+                <div
+                  class="w-5 h-5 bg-white rounded-full shadow-md transform peer-checked:translate-x-5"
+                ></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Mode sombre toggle
+      const toggle = document.getElementById("dark-mode-toggle");
+      toggle.addEventListener("change", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
+  </html>
