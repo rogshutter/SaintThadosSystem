@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de Connexion</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../js/firebase.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 transition duration-500">
+    <div class="flex h-screen items-center justify-center">
+      <div class="w-1/2 p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome Back</h1>
+        <p class="mb-8 text-center">Connectez-vous pour accéder à votre espace personnel.</p>
+      </div>
+      <div class="w-1/2 p-8 flex flex-col justify-center">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">Connexion</h2>
+        <form id="loginForm" class="space-y-4">
+          <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+          <input type="password" id="password" placeholder="Mot de passe" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+          <button type="submit" class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md">Connexion</button>
+        </form>        
+        <p class="mt-4 text-center text-gray-600 dark:text-gray-400">
+          <a href="#" class="text-blue-500 hover:underline">Connexion par empreinte digitale</a>
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script type="module">
+    import { loginUser } from '../js/firebase.js';
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+  
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+  
+        loginUser(email, password); // Appel de la fonction loginUser
+      });
+    });
+  </script>
+    
+</html>

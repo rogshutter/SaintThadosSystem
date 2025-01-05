@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+  <!-- Conteneur principal -->
+  <div class="flex h-screen">
+
+    <!-- Barre latérale -->
+    <aside class="w-64 bg-gray-800 text-white flex flex-col">
+      <div class="flex items-center justify-center h-16 bg-gray-900">
+        <h1 class="text-lg font-bold">Saint Thados</h1>
+      </div>
+      <nav class="flex-1 px-2 space-y-2">
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Dashboard</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Utilisateurs</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Paramètres</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Déconnexion</a>
+      </nav>
+    </aside> 
+
+    <!-- Section principale -->
+    <main class="flex-1 flex flex-col">
+      
+      <!-- En-tête -->
+      <header class="h-16 bg-white shadow-md flex items-center justify-between px-6">
+        <h2 class="text-xl font-semibold">Tableau de Bord</h2>
+        <div>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Ajouter
+          </button>
+        </div>
+      </header>
+
+      <!-- Contenu -->
+      <div class="p-6 flex-1 overflow-y-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Carte de contenu -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Statistique 1</h3>
+            <p class="mt-2 text-gray-600">Détail de la statistique.</p>
+          </div>
+
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Statistique 2</h3>
+            <p class="mt-2 text-gray-600">Détail de la statistique.</p>
+          </div>
+
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Statistique 3</h3>
+            <p class="mt-2 text-gray-600">Détail de la statistique.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
